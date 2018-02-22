@@ -26,9 +26,6 @@ public class ParamFrame {
 	private final int SUBWIDTH = 571;
 	private final int SUBHEIGHT = 152;
 
-	// 得到显示器屏幕的宽高
-	private final int width = Toolkit.getDefaultToolkit().getScreenSize().width;
-	private final int height = Toolkit.getDefaultToolkit().getScreenSize().height;
 
 	/**
 	 * Launch the application.
@@ -69,9 +66,8 @@ public class ParamFrame {
 		/**
 		 * ???????????????????????????????
 		 */
-		frame.setBounds((mainFrame.getLocationWidth() - SUBWIDTH) / 2,
-				(mainFrame.getLocationHeight() - SUBHEIGHT) / 2, SUBWIDTH, SUBHEIGHT);
-		
+		frame.setSize(SUBWIDTH, SUBHEIGHT);
+		frame.setLocationRelativeTo(mainFrame);
 		//子窗口永远在最上面
 		frame.setAlwaysOnTop(true);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
