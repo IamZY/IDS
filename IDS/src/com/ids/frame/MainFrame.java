@@ -31,7 +31,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JMenu;
 
-public class MainFrame {
+public class MainFrame extends JFrame{
 
 	private JFrame frame;
 	private NetworkInterface netInter;
